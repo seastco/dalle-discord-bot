@@ -7,7 +7,7 @@ from typing import Literal
 
 class Admin(commands.Cog):
 
-    def __init__(self, bot: commands.Bot):
+    def __init__(self, bot: commands.AutoShardedBot):
         self.bot = bot
 
     @commands.command(hidden=True)
@@ -36,5 +36,5 @@ class Admin(commands.Cog):
 
         return
 
-async def setup(bot: commands.Bot):
+async def setup(bot: commands.AutoShardedBot):
     await bot.add_cog(Admin(bot))
